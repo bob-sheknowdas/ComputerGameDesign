@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     private bool jump = false;
     private Animator animator;
+    private GameObject bg1;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        bg1 = GameObject.FindGameObjectWithTag("BackGround1");
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour {
         float leftright = Input.GetAxisRaw("Horizontal");
         if (updown>0 && jump==false )
         {
-            myRigid.velocity = new Vector2(myRigid.velocity.x, 10);
+            myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
             jump = true;
             animator.SetBool("running", false);
         }
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour {
             if(jump == false)
                 animator.SetBool("running", true);
             myRigid.velocity = new Vector2(-speed, myRigid.velocity.y);
+            bg1.transform.position = new Vector2(bg1.transform.position.x + (speed / 800), bg1.transform.position.y);
         }
         else if (leftright > 0f)
         {
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour {
             if (jump == false)
                 animator.SetBool("running", true);
             myRigid.velocity = new Vector2(speed, myRigid.velocity.y);
+            bg1.transform.position = new Vector2(bg1.transform.position.x - (speed / 800), bg1.transform.position.y);
         }
         else
         {
@@ -80,7 +84,7 @@ public class PlayerController : MonoBehaviour {
         Bounds bounds = other.collider.bounds;
         Vector3 center = bounds.center;
         Vector3 extends = bounds.extents;
-
+        
         return contactPoint.y > center.y && contactPoint.x > center.x - extends.x && contactPoint.x < center.x + extends.x;
     }
 }

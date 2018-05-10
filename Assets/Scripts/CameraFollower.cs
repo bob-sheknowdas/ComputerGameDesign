@@ -6,18 +6,22 @@ public class CameraFollower : MonoBehaviour {
 
     private Vector2 velocity;
     private GameObject player;
-    public float smoothTimeX;
-    public float smoothTimeY;
+    public float smoothTime;
 
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
-	}
+    }
 
     void FixedUpdate()
     {
-        float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
-        float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTimeY);
+        MoveCamera();
+    }
+
+    void MoveCamera()
+    {
+        float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTime);
+        float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTime);
 
         transform.position = new Vector3(posX, posY, transform.position.z);
     }
