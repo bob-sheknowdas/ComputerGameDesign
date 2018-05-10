@@ -67,7 +67,20 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Platform" && jump==true)
         {
-            jump = false;
+            Vector3 contactPoint = other.contacts[0].point;
+            Vector3 center = other.collider.bounds.center;
+            if( HitFromAbove(other))
+                jump = false;
         }
+    }
+
+    bool HitFromAbove(Collision2D other)
+    {
+        Vector3 contactPoint = other.contacts[0].point;
+        Bounds bounds = other.collider.bounds;
+        Vector3 center = bounds.center;
+        Vector3 extends = bounds.extents;
+
+        return contactPoint.y > center.y && contactPoint.x > center.x - extends.x && contactPoint.x < center.x + extends.x;
     }
 }
