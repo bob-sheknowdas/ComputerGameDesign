@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Plattform" && jump==true)
+        if (other.gameObject.tag == "Platform" && jump==true)
         {
             jump = false;
         }

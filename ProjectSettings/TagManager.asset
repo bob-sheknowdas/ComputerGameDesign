@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Killer
   - trigger
-  - Plattform
+  - Platform
   layers:
   - Default
   - TransparentFX
