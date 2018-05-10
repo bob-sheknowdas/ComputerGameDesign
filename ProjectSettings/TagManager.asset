@@ -7,7 +7,11 @@ TagManager:
   - trigger
   - trigger1
   - Killer
+<<<<<<< HEAD
   - player
+=======
+  - Plattform
+>>>>>>> f8e437a4aa43eb54f5ac0cf42d84acda93e4969b
   layers:
   - Default
   - TransparentFX
