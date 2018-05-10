@@ -19,12 +19,12 @@ public class PlayerController : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.Space) && jump==false )
         {
-            myRigid.velocity = new Vector2(myRigid.velocity.x, 9);
+            myRigid.velocity = new Vector2(myRigid.velocity.x, 10);
             jump = true;
             animator.SetBool("running", false);
         }
         Vector2 scale = transform.localScale;
-        float movement = Input.GetAxis("Horizontal");
+        float movement = Input.GetAxisRaw("Horizontal");
         if (movement < 0f)
         {
             if(scale.x > 0)
