@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FireballController : MonoBehaviour {
 
-    private int direction = -1;
+    public int direction = -1;
 
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0.05f*direction, 0, 0);
+        transform.Translate(0.45f*direction, 0, 0);
     }
 
     void switchDirection()

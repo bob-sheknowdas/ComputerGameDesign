@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - trigger
+  - trigger1
   - Killer
   layers:
   - Default
@@ -39,11 +41,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 998259001
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Playerground
     uniqueID: 770096797
