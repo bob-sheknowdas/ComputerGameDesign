@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour {
     private bool jump = false;
     private Animator animator;
     private GameObject bg1;
+    private float oldPositionX;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         bg1 = GameObject.FindGameObjectWithTag("BackGround1");
+        oldPositionX = this.transform.position.x;
     }
 
     // Update is called once per frame
@@ -40,7 +42,11 @@ public class PlayerController : MonoBehaviour {
             if(jump == false)
                 animator.SetBool("running", true);
             myRigid.velocity = new Vector2(-speed, myRigid.velocity.y);
-            bg1.transform.position = new Vector2(bg1.transform.position.x + (speed / 800), bg1.transform.position.y);
+            if (this.transform.position.x < oldPositionX)
+            {
+                oldPositionX = this.transform.position.x;
+                bg1.transform.position = new Vector2(bg1.transform.position.x + (speed / 800), bg1.transform.position.y);
+            }
         }
         else if (leftright > 0f)
         {
@@ -49,7 +55,11 @@ public class PlayerController : MonoBehaviour {
             if (jump == false)
                 animator.SetBool("running", true);
             myRigid.velocity = new Vector2(speed, myRigid.velocity.y);
-            bg1.transform.position = new Vector2(bg1.transform.position.x - (speed / 800), bg1.transform.position.y);
+            if (this.transform.position.x > oldPositionX)
+            {
+                oldPositionX = this.transform.position.x;
+                bg1.transform.position = new Vector2(bg1.transform.position.x - (speed / 800), bg1.transform.position.y);
+            }
         }
         else
         {

@@ -55,6 +55,9 @@ TagManager:
   - name: bg
     uniqueID: 4024500921
     locked: 0
+  - name: mg3
+    uniqueID: 2195707803
+    locked: 0
   - name: mg2
     uniqueID: 307559411
     locked: 0
