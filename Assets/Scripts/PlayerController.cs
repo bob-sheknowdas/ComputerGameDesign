@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -51,7 +52,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Killer")
         {
-            this.gameObject.SetActive(false);
+            SceneManager.LoadScene("loseScene");
+            // this.gameObject.SetActive(false);
         }
     }
 

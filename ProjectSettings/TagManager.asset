@@ -4,14 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - trigger
-  - trigger1
   - Killer
-<<<<<<< HEAD
+  - trigger
   - player
-=======
   - Plattform
->>>>>>> f8e437a4aa43eb54f5ac0cf42d84acda93e4969b
   layers:
   - Default
   - TransparentFX
@@ -46,15 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 998259001
+  - name: bg
+    uniqueID: 4024500921
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Playerground
-    uniqueID: 770096797
-    locked: 0
-  - name: Foreground
-    uniqueID: 4070964621
     locked: 0
