@@ -239,6 +239,7 @@
     <Compile Include="Assets\Scripts\FireballController.cs" />
     <Compile Include="Assets\Scripts\FireballSpawner.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\LoseScene.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Spike3Disappear.cs" />
     <Compile Include="Assets\Scripts\SpikeSpawner.cs" />
