@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Killer
   - trigger
-  - player
   - Plattform
   layers:
   - Default

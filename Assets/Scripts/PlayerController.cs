@@ -16,16 +16,22 @@ public class PlayerController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && jump==false )
+    void Update ()
+    {
+        float updown = Input.GetAxisRaw("Vertical");
+        float leftright = Input.GetAxisRaw("Horizontal");
+        if (updown>0 && jump==false )
         {
             myRigid.velocity = new Vector2(myRigid.velocity.x, 10);
             jump = true;
             animator.SetBool("running", false);
         }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("hitting");
+        }
         Vector2 scale = transform.localScale;
-        float movement = Input.GetAxisRaw("Horizontal");
-        if (movement < 0f)
+        if (leftright < 0f)
         {
             if(scale.x > 0)
                 transform.localScale = new Vector2(scale.x * -1, scale.y);
@@ -33,7 +39,7 @@ public class PlayerController : MonoBehaviour {
                 animator.SetBool("running", true);
             myRigid.velocity = new Vector2(-speed, myRigid.velocity.y);
         }
-        else if (movement > 0f)
+        else if (leftright > 0f)
         {
             if (scale.x < 0)
                 transform.localScale = new Vector2(scale.x * -1, scale.y);
