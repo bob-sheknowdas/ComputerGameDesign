@@ -7,6 +7,7 @@ TagManager:
   - trigger
   - trigger1
   - Killer
+  - player
   layers:
   - Default
   - TransparentFX

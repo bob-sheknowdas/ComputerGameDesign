@@ -8,7 +8,7 @@ public class FireballController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0.45f*direction, 0, 0);
+        transform.Translate(0.3f*direction, 0, 0);
     }
 
     void switchDirection()
