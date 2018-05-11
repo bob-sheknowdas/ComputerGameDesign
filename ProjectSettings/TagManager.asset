@@ -9,6 +9,9 @@ TagManager:
   - Platform
   - BackGround1
   - BackGround2
+  - GroundCheck
+  - Enemy
+  - SwordHitCheck
   layers:
   - Default
   - TransparentFX
@@ -18,9 +21,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemy
   - 
   - 
   - 

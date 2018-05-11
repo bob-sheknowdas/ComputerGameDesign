@@ -15,6 +15,7 @@ public class DisappearTrigger : MonoBehaviour {
         {
             GameObject.Destroy(block);
             Instantiate(spikewall, new Vector3(startingX, startingY, 0), Quaternion.identity);
+            Destroy(gameObject);
         }
             
 
