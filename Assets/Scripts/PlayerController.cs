@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (alive)
         {
-            grounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.02f, whatIsGround);
+
+            grounded = IsGrounded();
             animator.SetBool("grounded", grounded);
             animator.SetFloat("vSpeed", myRigid.velocity.y);
             float updown = Input.GetAxisRaw("Vertical");
@@ -85,9 +86,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    bool IsGrounded()
+    {
+        Vector3 position1 = groundCheck.transform.position;
+        Vector3 position2 = new Vector3(position1.x + 0.8f, position1.y + 0.02f, position1.z);
+        return Physics2D.OverlapArea(position1, position2, whatIsGround);
+    }
+
     void Die()
     {
-        SceneManager.LoadScene("loseScene");
+        SceneManager.LoadScene("StartScene");
     }
 
     void Attack()

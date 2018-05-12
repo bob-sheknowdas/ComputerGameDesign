@@ -12,6 +12,8 @@ TagManager:
   - GroundCheck
   - Enemy
   - SwordHitCheck
+  - GroundCheck2
+  - StartText
   layers:
   - Default
   - TransparentFX

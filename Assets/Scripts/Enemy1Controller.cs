@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy1Controller : MonoBehaviour
 {
@@ -91,5 +92,11 @@ public class Enemy1Controller : MonoBehaviour
         Vector2 startPosition = new Vector2(position.x, position.y - 0.5f);
         Vector2 endPosition = new Vector2(position.x + (0.6f * direction), position.y - 0.5f);
         return Physics2D.Linecast(startPosition, endPosition, 1 << LayerMask.NameToLayer("Wall"));
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene("StartScene");
     }
 }

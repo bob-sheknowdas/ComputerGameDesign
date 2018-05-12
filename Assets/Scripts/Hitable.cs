@@ -17,9 +17,4 @@ public class Hitable : MonoBehaviour {
         myRigid.velocity = new Vector2(0, myRigid.velocity.y);
         animator.SetTrigger("hit");
     }
-
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
 }
