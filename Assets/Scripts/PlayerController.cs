@@ -10,10 +10,8 @@ public class PlayerController : MonoBehaviour {
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
     private Animator animator;
-    private GameObject bg1;
     private GameObject groundCheck;
     private GameObject swordCheck;
-    private float oldPositionX;
     private int direction = 1;
     private bool alive = true;
     private bool grounded = true;
@@ -22,10 +20,8 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         animator = GetComponent<Animator>();
-        bg1 = GameObject.FindGameObjectWithTag("BackGround1");
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
         swordCheck = GameObject.FindGameObjectWithTag("SwordHitCheck");
-        oldPositionX = this.transform.position.x;
     }
 
     // Update is called once per frame
@@ -125,17 +121,6 @@ public class PlayerController : MonoBehaviour {
 
         if (scale.x*direction < 0)
             transform.localScale = new Vector2(scale.x * -1, scale.y);
-
-        if (this.transform.position.x < oldPositionX)
-        {
-            oldPositionX = this.transform.position.x;
-            bg1.transform.position = new Vector2(bg1.transform.position.x + (speed / 800), bg1.transform.position.y);
-        }
-        else if (this.transform.position.x > oldPositionX)
-        {
-            oldPositionX = this.transform.position.x;
-            bg1.transform.position = new Vector2(bg1.transform.position.x - (speed / 800), bg1.transform.position.y);
-        }
     }
 
     void StopMovement()
