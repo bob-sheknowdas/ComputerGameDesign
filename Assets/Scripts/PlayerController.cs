@@ -9,13 +9,14 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
-    private bool jump = false;
     private Animator animator;
     private GameObject bg1;
     private GameObject groundCheck;
     private GameObject swordCheck;
     private float oldPositionX;
     private int direction = 1;
+    private bool alive = true;
+    private bool grounded = true;
 
     // Use this for initialization
     void Start()
@@ -30,39 +31,42 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (Physics2D.OverlapCircle(groundCheck.transform.position, 0.02f, whatIsGround))
-            jump = false;
-
-        float updown = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (alive)
         {
-            Attack();
-        }
+            grounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.02f, whatIsGround);
+            animator.SetBool("grounded", grounded);
+            animator.SetFloat("vSpeed", myRigid.velocity.y);
+            float updown = Input.GetAxisRaw("Vertical");
 
-        else if (updown > 0 && jump == false)
-        {
-            Jump();
-        }
-
-        else
-        {
-            float leftright = Input.GetAxisRaw("Horizontal");
-            Vector2 scale = transform.localScale;
-
-            if (leftright < 0f)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                direction = -1;
-                Move();
+                Attack();
             }
-            else if (leftright > 0f)
+
+            else if (updown > 0 && grounded == true)
             {
-                direction = 1;
-                Move();
+                Jump();
             }
+
             else
             {
-                StopMovement();
+                float leftright = Input.GetAxisRaw("Horizontal");
+                Vector2 scale = transform.localScale;
+
+                if (leftright < 0f)
+                {
+                    direction = -1;
+                    Move();
+                }
+                else if (leftright > 0f)
+                {
+                    direction = 1;
+                    Move();
+                }
+                else
+                {
+                    StopMovement();
+                }
             }
         }
     }
@@ -71,13 +75,24 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Killer")
         {
-            SceneManager.LoadScene("loseScene");
+            alive = false;
+            myRigid.velocity = new Vector2(0, 0);
+            animator.SetTrigger("hit");
+            if(other.gameObject.layer == 11)
+            {
+                other.gameObject.GetComponent<FireballController>().EndMovement();
+            }
         }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene("loseScene");
     }
 
     void Attack()
     {
-        animator.SetTrigger("hitting");
+        animator.SetTrigger("attacking");
         Vector2 position = new Vector2(swordCheck.transform.position.x + (0.4f * direction), swordCheck.transform.position.y);
         Collider2D enemy = Physics2D.OverlapCircle(position, 0.6f, whatIsHitable);
         if(enemy)
@@ -90,7 +105,6 @@ public class PlayerController : MonoBehaviour {
     {
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
-        jump = true;
     }
 
     void Move()
@@ -98,7 +112,7 @@ public class PlayerController : MonoBehaviour {
         Vector2 scale = transform.localScale;
         myRigid.velocity = new Vector2(speed * direction, myRigid.velocity.y);
 
-        if (jump == false)
+        if (grounded == true)
             animator.SetBool("running", true);
 
         if (scale.x*direction < 0)

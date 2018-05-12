@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigid: {fileID: 50423139298533248}
-  fireball: {fileID: 1499276362168114, guid: d2fa38cf9e2f03143b524bec4c31c4c7, type: 2}
+  fireball: {fileID: 1009665857782636, guid: d2fa38cf9e2f03143b524bec4c31c4c7, type: 2}
   speed: 3.5
 --- !u!212 &212234659070792016
 SpriteRenderer:

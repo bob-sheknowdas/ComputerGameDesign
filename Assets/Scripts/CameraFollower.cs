@@ -11,6 +11,7 @@ public class CameraFollower : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+        MoveCamera();
     }
 
     void FixedUpdate()

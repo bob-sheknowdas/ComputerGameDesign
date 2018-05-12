@@ -10,13 +10,13 @@ public class FireballSpawner : MonoBehaviour {
 
     void Spawnfireball()
     {
+        Debug.Log("1");
         GameObject.Instantiate(fireball, new Vector3(startingX, startingY, 0), Quaternion.identity);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         Spawnfireball();
-        //if(tag =="trigger")
-            Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
