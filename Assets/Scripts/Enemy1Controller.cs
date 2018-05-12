@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy1Controller : MonoBehaviour
+public class Enemy1Controller : Hitable
 {
 
     public Rigidbody2D myRigid;
@@ -58,6 +58,13 @@ public class Enemy1Controller : MonoBehaviour
     public void Activate()
     {
         wasActivated = true;
+    }
+
+    public override void Hit()
+    {
+        myRigid.velocity = new Vector2(0, 0);
+        wasActivated = false;
+        base.Hit();
     }
 
     void Attack(Vector2 position, Vector2 playerPosition)

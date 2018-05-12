@@ -10,7 +10,6 @@ public class FireballSpawner : MonoBehaviour {
 
     void Spawnfireball()
     {
-        Debug.Log("1");
         GameObject.Instantiate(fireball, new Vector3(startingX, startingY, 0), Quaternion.identity);
     }
 

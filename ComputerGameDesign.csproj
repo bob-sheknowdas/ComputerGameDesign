@@ -292,6 +292,7 @@
     <Compile Include="Assets\Scripts\Hitable.cs" />
     <Compile Include="Assets\Scripts\LoseScene.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RockController.cs" />
     <Compile Include="Assets\Scripts\Spike3Disappear.cs" />
     <Compile Include="Assets\Scripts\SpikeSpawner.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />

@@ -89,13 +89,13 @@ public class PlayerController : MonoBehaviour {
     bool IsGrounded()
     {
         Vector3 position1 = groundCheck.transform.position;
-        Vector3 position2 = new Vector3(position1.x + 0.8f, position1.y + 0.02f, position1.z);
+        Vector3 position2 = new Vector3(position1.x + 0.4f, position1.y + 0.02f, position1.z);
         return Physics2D.OverlapArea(position1, position2, whatIsGround);
     }
 
     void Die()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("Scene1");
     }
 
     void Attack()
