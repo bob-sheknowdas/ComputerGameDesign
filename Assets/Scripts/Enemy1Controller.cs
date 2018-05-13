@@ -60,13 +60,6 @@ public class Enemy1Controller : Hitable
         wasActivated = true;
     }
 
-    public override void Hit()
-    {
-        myRigid.velocity = new Vector2(0, 0);
-        wasActivated = false;
-        base.Hit();
-    }
-
     void Attack(Vector2 position, Vector2 playerPosition)
     {
         animator.SetTrigger("attacking");
@@ -101,9 +94,16 @@ public class Enemy1Controller : Hitable
         return Physics2D.Linecast(startPosition, endPosition, 1 << LayerMask.NameToLayer("Wall"));
     }
 
-    public void Destroy()
+    public override void Hit()
     {
-        Destroy(gameObject);
+        myRigid.velocity = new Vector2(0, 0);
+        wasActivated = false;
+        base.Hit();
+    }
+
+    public override void Destroy()
+    {
+        base.Destroy();
         SceneManager.LoadScene("StartScene");
     }
 }

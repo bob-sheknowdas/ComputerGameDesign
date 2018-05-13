@@ -282,21 +282,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Abstract Classes\Destroyable.cs" />
+    <Compile Include="Assets\Scripts\Abstract Classes\Hitable.cs" />
     <Compile Include="Assets\Scripts\Bg1Follower.cs" />
     <Compile Include="Assets\Scripts\CameraFollower.cs" />
-    <Compile Include="Assets\Scripts\DisappearTrigger.cs" />
-    <Compile Include="Assets\Scripts\Enemy1Activator.cs" />
     <Compile Include="Assets\Scripts\Enemy1Controller.cs" />
     <Compile Include="Assets\Scripts\FireballController.cs" />
-    <Compile Include="Assets\Scripts\FireballSpawner.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\Hitable.cs" />
-    <Compile Include="Assets\Scripts\LoseScene.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\RockController.cs" />
-    <Compile Include="Assets\Scripts\Spike3Disappear.cs" />
-    <Compile Include="Assets\Scripts\SpikeSpawner.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
+    <Compile Include="Assets\Scripts\Trigger\BrokenBlockTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\Enemy1Activator.cs" />
+    <Compile Include="Assets\Scripts\Trigger\FireballSpawner.cs" />
+    <Compile Include="Assets\Scripts\Trigger\SpikewallFaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DownloadedContent\AssetStore\Dragon Warrior Files\Read Me.txt" />

@@ -9,7 +9,6 @@ public class RockController : Hitable {
 
     public override void Hit()
     {
-        Debug.Log("A");
         hitcount++;
         if (hitcount == 1)
         {
@@ -19,10 +18,5 @@ public class RockController : Hitable {
         {
             base.Hit();
         }
-    }
-
-    void Destroy()
-    {
-        Destroy(this.gameObject);
     }
 }
