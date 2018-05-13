@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
 
     public Rigidbody2D myRigid;
-    public float speed;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
+    public float speed;
+    public string sceneToRespawn;
     private Animator animator;
     private GameObject groundCheck;
     private GameObject swordCheck;
-    private int direction = 1;
     private bool alive = true;
     private bool grounded = true;
+    private int direction = 1;
 
     // Use this for initialization
     void Start()
@@ -29,11 +30,13 @@ public class PlayerController : MonoBehaviour {
     {
         if (alive)
         {
-
             grounded = IsGrounded();
             animator.SetBool("grounded", grounded);
             animator.SetFloat("vSpeed", myRigid.velocity.y);
             float updown = Input.GetAxisRaw("Vertical");
+
+            if (!grounded)
+                LimitFallSpeed();
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -82,6 +85,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void LimitFallSpeed()
+    {
+        if (myRigid.velocity.magnitude > 20)
+        {
+            myRigid.velocity = Vector3.ClampMagnitude(myRigid.velocity, 15);
+        }
+    }
+
     bool IsGrounded()
     {
         Vector3 position1 = groundCheck.transform.position;
@@ -91,7 +102,10 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
-        SceneManager.LoadScene("Scene1");
+        PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
+        Debug.Log(PlayerPrefs.GetInt("deaths"));
+        Debug.Log(PlayerPrefs.GetInt("kills"));
+        SceneManager.LoadScene(sceneToRespawn);
     }
 
     void Attack()

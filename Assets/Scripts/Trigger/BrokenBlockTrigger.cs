@@ -5,6 +5,7 @@ using UnityEngine;
 public class BrokenBlockTrigger : MonoBehaviour {
 
     public GameObject block;
+    public float secondsToWait;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,7 +17,7 @@ public class BrokenBlockTrigger : MonoBehaviour {
 
     IEnumerator Destruction()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(secondsToWait);
         block.GetComponent<Animator>().SetTrigger("brake");
         Destroy(block.GetComponent<BoxCollider2D>());
         Destroy(gameObject);

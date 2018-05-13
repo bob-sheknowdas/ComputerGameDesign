@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bg1Follower : MonoBehaviour {
 
     private GameObject player;
-    private float speed;
     private Vector2 playerPosition;
 
     // Use this for initialization
@@ -13,7 +12,6 @@ public class Bg1Follower : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerPosition = player.transform.position;
-        speed = player.GetComponent<PlayerController>().speed;
     }
 	
 	// Update is called once per frame

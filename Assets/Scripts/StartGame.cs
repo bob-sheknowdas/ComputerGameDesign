@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
 
-    Text startText;
+    private Text startText;
     private float currentTime = 0;
     private float blinkTime = 2;
     private bool blinking = false;
@@ -23,6 +23,8 @@ public class StartGame : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                PlayerPrefs.SetInt("deaths", 0);
+                PlayerPrefs.SetInt("kills", 0);
                 SceneManager.LoadScene("Scene1");
             }
         }

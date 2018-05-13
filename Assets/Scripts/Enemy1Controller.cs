@@ -103,7 +103,9 @@ public class Enemy1Controller : Hitable
 
     public override void Destroy()
     {
+        PlayerPrefs.SetInt("kills", 1 + PlayerPrefs.GetInt("kills"));
+        PlayerPrefs.SetInt("level", 5);
         base.Destroy();
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("ScoreScene");
     }
 }

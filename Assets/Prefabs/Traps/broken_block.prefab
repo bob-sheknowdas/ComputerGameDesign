@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 1766125300010208}
+  secondsToWait: 1
 --- !u!212 &212042600528397648
 SpriteRenderer:
   m_ObjectHideFlags: 1

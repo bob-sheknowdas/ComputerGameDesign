@@ -14,6 +14,12 @@ TagManager:
   - SwordHitCheck
   - GroundCheck2
   - StartText
+  - LevelText
+  - LevelNumberText
+  - KillText
+  - KillNumberText
+  - DeathText
+  - DeathNumberText
   layers:
   - Default
   - TransparentFX

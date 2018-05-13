@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CameraFollower : MonoBehaviour {
 
+    public float offsetX;
+    public float offsetY;
+    public float smoothTime;
     private Vector2 velocity;
     private GameObject player;
-    public float smoothTime;
 
     // Use this for initialization
     void Start () {
@@ -24,6 +26,6 @@ public class CameraFollower : MonoBehaviour {
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTime);
         float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTime);
 
-        transform.position = new Vector3(posX+0.5f, posY+0.5f, transform.position.z);
+        transform.position = new Vector3(posX+offsetX, posY+offsetY, transform.position.z);
     }
 }
