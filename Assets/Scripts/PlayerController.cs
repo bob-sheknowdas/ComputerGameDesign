@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (alive)
         {
@@ -75,14 +75,19 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.gameObject.tag == "Killer")
         {
-            alive = false;
-            myRigid.velocity = new Vector2(0, 0);
-            animator.SetTrigger("hit");
-            if(other.gameObject.layer == 11)
+            Hit();
+            if (other.gameObject.layer == 11)
             {
                 other.gameObject.GetComponent<FireballController>().EndMovement();
             }
         }
+    }
+
+    public void Hit()
+    {
+        alive = false;
+        myRigid.velocity = new Vector2(0, 0);
+        animator.SetTrigger("hit");
     }
 
     void LimitFallSpeed()
