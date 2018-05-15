@@ -3,3 +3,4 @@
 - story design
 - level design (level 1 - 5)
 - enemies (flying explosives)
+- start and score screen optimizing
