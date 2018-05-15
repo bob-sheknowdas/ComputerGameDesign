@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public LayerMask whatIsHitable;
     public float speed;
     public string sceneToRespawn;
+    public bool hasSword;
     private AudioSource myAudioSource;
     private Animator animator;
     private GameObject groundCheck;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour {
         if (alive)
         {
             grounded = IsGrounded();
+
             animator.SetBool("grounded", grounded);
             animator.SetFloat("vSpeed", myRigid.velocity.y);
             float updown = Input.GetAxisRaw("Vertical");
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour {
             if (!grounded)
                 LimitFallSpeed();
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && hasSword)
             {
                 Attack();
             }
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour {
         myRigid.velocity = new Vector2(0, 0);
         animator.SetTrigger("hit");
     }
-
+    
     void LimitFallSpeed()
     {
         if (myRigid.velocity.magnitude > 20)
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour {
     bool IsGrounded()
     {
         Vector3 position1 = groundCheck.transform.position;
-        Vector3 position2 = new Vector3(position1.x + 0.4f, position1.y + 0.02f, position1.z);
+        Vector3 position2 = new Vector3(position1.x + (direction * 0.4f), position1.y + 0.02f, position1.z);
         return Physics2D.OverlapArea(position1, position2, whatIsGround);
     }
 
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour {
         myAudioSource.PlayOneShot(dieSound);
         myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
+        PlayerPrefs.SetInt("kills", 0);
         SceneManager.LoadScene(sceneToRespawn);
     }
 
@@ -153,5 +156,16 @@ public class PlayerController : MonoBehaviour {
     {
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(0, myRigid.velocity.y);
+    }
+
+    public int GetDirection()
+    {
+        return direction;
+    }
+
+    public void SetActive(bool trueFalse)
+    {
+        animator.SetBool("running", false);
+        alive = trueFalse;
     }
 }

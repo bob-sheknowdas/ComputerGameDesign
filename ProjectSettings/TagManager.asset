@@ -21,6 +21,7 @@ TagManager:
   - DeathText
   - DeathNumberText
   - AudioSource
+  - SpeechPanel
   layers:
   - Default
   - TransparentFX
@@ -78,4 +79,7 @@ TagManager:
     locked: 0
   - name: fg
     uniqueID: 3508615381
+    locked: 0
+  - name: fgg
+    uniqueID: 1631032849
     locked: 0
