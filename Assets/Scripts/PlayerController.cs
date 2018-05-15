@@ -115,8 +115,6 @@ public class PlayerController : MonoBehaviour {
         myAudioSource.PlayOneShot(dieSound);
         myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
-        Debug.Log(PlayerPrefs.GetInt("deaths"));
-        Debug.Log(PlayerPrefs.GetInt("kills"));
         SceneManager.LoadScene(sceneToRespawn);
     }
 

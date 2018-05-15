@@ -3192,6 +3192,12 @@ Prefab:
       propertyPath: m_Mass
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114468417706435742, guid: 56ba4885d48f77e49bd06f5442598ceb,
+        type: 2}
+      propertyPath: fireball
+      value: 
+      objectReference: {fileID: 1829190975486604, guid: d2fa38cf9e2f03143b524bec4c31c4c7,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114238330650216496, guid: 56ba4885d48f77e49bd06f5442598ceb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 56ba4885d48f77e49bd06f5442598ceb, type: 2}
