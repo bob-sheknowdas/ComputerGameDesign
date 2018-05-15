@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireballController : MonoBehaviour {
-
+    public AudioClip fireball;
+    private AudioSource myAudioSource;
     private Animator animator;
     private float time = 0;
     private Vector2 direction = new Vector2(-0.1f, 0);
@@ -12,6 +13,7 @@ public class FireballController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -47,6 +49,7 @@ public class FireballController : MonoBehaviour {
 
     void Destroy()
     {
+        myAudioSource.PlayOneShot(fireball);
         Destroy(this.gameObject);
     }
 

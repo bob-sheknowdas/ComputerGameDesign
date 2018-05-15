@@ -20,6 +20,7 @@ TagManager:
   - KillNumberText
   - DeathText
   - DeathNumberText
+  - AudioSource
   layers:
   - Default
   - TransparentFX

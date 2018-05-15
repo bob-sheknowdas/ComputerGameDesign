@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93088fbe27b0a9945bbd1a8a811f59aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 1009665857782636, guid: d2fa38cf9e2f03143b524bec4c31c4c7, type: 2}
+  fireball: {fileID: 1829190975486604, guid: d2fa38cf9e2f03143b524bec4c31c4c7, type: 2}
   startingX: 8
   startingY: -4
 --- !u!212 &212532823911787282

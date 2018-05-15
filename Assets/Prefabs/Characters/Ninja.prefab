@@ -175,14 +175,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c775f5bec90929489d201d32431dec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dieSound: {fileID: 0}
+  swordSound: {fileID: 8300000, guid: ada2abcc897f17b42950443e4efe481c, type: 3}
+  jumpSound: {fileID: 8300000, guid: 9260350793774b148b8e84603b2ad764, type: 3}
   myRigid: {fileID: 50744311512646298}
-  speed: 5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294965742
   whatIsHitable:
     serializedVersion: 2
     m_Bits: 5120
+  speed: 5
+  sceneToRespawn: 
 --- !u!212 &212483019910113558
 SpriteRenderer:
   m_ObjectHideFlags: 1

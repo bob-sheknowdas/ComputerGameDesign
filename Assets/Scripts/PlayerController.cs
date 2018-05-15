@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
+    public AudioClip dieSound;
+    public AudioClip swordSound;
+    public AudioClip jumpSound;
     public Rigidbody2D myRigid;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
     public float speed;
     public string sceneToRespawn;
+    private AudioSource myAudioSource;
     private Animator animator;
     private GameObject groundCheck;
     private GameObject swordCheck;
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
         swordCheck = GameObject.FindGameObjectWithTag("SwordHitCheck");
+        myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,6 +107,8 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
+        myAudioSource.PlayOneShot(dieSound);
+        myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
         Debug.Log(PlayerPrefs.GetInt("deaths"));
         Debug.Log(PlayerPrefs.GetInt("kills"));
@@ -110,6 +117,7 @@ public class PlayerController : MonoBehaviour {
 
     void Attack()
     {
+        myAudioSource.PlayOneShot(swordSound);
         animator.SetTrigger("attacking");
         Vector2 position = new Vector2(swordCheck.transform.position.x + (0.4f * direction), swordCheck.transform.position.y);
         Collider2D enemy = Physics2D.OverlapCircle(position, 0.6f, whatIsHitable);
@@ -121,6 +129,7 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
+        myAudioSource.PlayOneShot(jumpSound);
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
     }
