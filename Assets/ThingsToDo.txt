@@ -1,6 +1,6 @@
 - sounds and music
-- text and narrative
 - story design
-- level design (level 1 - 5)
-- enemies (flying explosives)
+- level design (level 1 - 3)
 - start and score screen optimizing
+- grafics + material + prefabs for snow level (level 3)
+- enemies (snow-monster)
