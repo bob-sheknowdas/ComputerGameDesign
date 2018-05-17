@@ -31,7 +31,6 @@ public class FatbatControler : Hitable
         if (active)
         {
             float yDistance = playerPosition.y - position.y;
-            float xDistance = playerPosition.x - position.x;
 
             if (yDistance < 0)
                 yDistance *= -1;
@@ -49,7 +48,7 @@ public class FatbatControler : Hitable
                 MoveTowardsPlayer(position, playerPosition);
             }
         }
-        else if (playerDistance <= 10)
+        else if (playerDistance <= 11)
             active = true;
     }
 

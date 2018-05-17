@@ -227,7 +227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4674772490261142, guid: 28daf46864ca6784589f61b594201555, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 57.1
+      value: 63.3
       objectReference: {fileID: 0}
     - target: {fileID: 4674772490261142, guid: 28daf46864ca6784589f61b594201555, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4567,7 +4567,7 @@ Prefab:
     - target: {fileID: 114020268147007992, guid: d2197293800882543be53606de1d8cf3,
         type: 2}
       propertyPath: text
-      value: Shit!$There is on on the right now!$And an ExplodaBat
+      value: Shit!$There is on on the right now!
       objectReference: {fileID: 0}
     - target: {fileID: 114020268147007992, guid: d2197293800882543be53606de1d8cf3,
         type: 2}
