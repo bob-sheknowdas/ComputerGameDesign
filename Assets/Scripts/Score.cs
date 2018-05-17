@@ -45,7 +45,7 @@ public class Score : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("deaths", 0);
                 PlayerPrefs.SetInt("kills", 0);
-                if (7-level <3)
+                if (7-level <4)
                     SceneManager.LoadScene("Scene"+(7-level));
                 else
                     SceneManager.LoadScene("StartScene");

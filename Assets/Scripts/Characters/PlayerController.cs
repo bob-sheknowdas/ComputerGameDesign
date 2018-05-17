@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
-    public AudioClip dieSound;
+    //public AudioClip dieSound;
     public AudioClip swordSound;
-    public AudioClip jumpSound;
+    //public AudioClip jumpSound;
     public Rigidbody2D myRigid;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
@@ -114,8 +114,7 @@ public class PlayerController : MonoBehaviour {
 
     void Die()
     {
-        myAudioSource.PlayOneShot(dieSound);
-        myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        //myAudioSource.PlayOneShot(dieSound);
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
         PlayerPrefs.SetInt("kills", 0);
         SceneManager.LoadScene(sceneToRespawn);
@@ -135,7 +134,7 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        myAudioSource.PlayOneShot(jumpSound);
+        //myAudioSource.PlayOneShot(jumpSound);
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
     }
