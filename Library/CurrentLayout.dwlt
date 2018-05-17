@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 930
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 120
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 519
     height: 930
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -206,7 +206,7 @@ MonoBehaviour:
     y: 0
     width: 1401
     height: 930
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 12
@@ -230,8 +230,8 @@ MonoBehaviour:
     y: 0
     width: 1401
     height: 501
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 13
 --- !u!114 &11
@@ -588,19 +588,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Traps
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/Traps
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cleppelt\Unity\ComputerGameDesign
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc2d0000
-    m_LastClickedID: 11724
-    m_ExpandedIDs: 000000007c270000d627000000280000982a0000062b0000ca2d0000ce2d00009e2e000030310000323100003431000036310000383100003a3100003c3100003e31000040310000423100004431000046310000483100004a3100004c3100004e31000050310000523100005431000056310000583100005a3100005c31000000ca9a3bffffff7f
+    m_SelectedIDs: ea280000
+    m_LastClickedID: 10474
+    m_ExpandedIDs: 000000007c270000d627000000280000a6280000982a0000062b0000442b0000d02d0000a42e00001e30000020300000223000002430000026300000283000002a3000002c3000002e30000030300000323000003430000036300000383000003a3000003c3000003e30000040300000423000004430000046300000483000004a30000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,7 +628,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c270000d627000000280000a6280000062b0000aa2b0000922d0000ca2d00009e2e000030310000323100003431000036310000383100003a3100003c3100003e31000040310000423100004431000046310000483100004a3100004c3100004e31000050310000523100005431000056310000583100005a3100005c310000
+    m_ExpandedIDs: 000000007c270000d627000000280000a6280000982a0000062b0000442b0000d02d0000d42d0000a42e00001e30000020300000223000002430000026300000283000002a3000002c3000002e30000030300000323000003430000036300000383000003a3000003c3000003e30000040300000423000004430000046300000483000004a300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -746,9 +746,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: dceaffff9efbffff00000000802f0000fe320000
+    m_SelectedIDs: dc330000
+    m_LastClickedID: 13276
+    m_ExpandedIDs: 4ec7ffff82f0ffff1af9ffff60f9ffff9efbffff00000000823000009e350000f4350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -799,14 +799,14 @@ MonoBehaviour:
     height: 480
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 230.5779615841012
+  lastFramingTime: 175.13747354160037
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.339635, y: 35.071102, z: -0.3275572}
+    m_Target: {x: -4.200851, y: 98.32191, z: -0.11049705}
     speed: 2
-    m_Value: {x: -5.339635, y: 35.071102, z: -0.3275572}
+    m_Value: {x: -4.200851, y: 98.32191, z: -0.11049705}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -834,9 +834,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 45.116653
+    m_Target: 15.514834
     speed: 2
-    m_Value: 45.116653
+    m_Value: 15.514834
   m_Ortho:
     m_Target: 1
     speed: 2
