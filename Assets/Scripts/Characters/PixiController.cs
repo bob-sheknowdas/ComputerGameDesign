@@ -8,7 +8,6 @@ public class PixiController : MonoBehaviour {
     private GameObject player;
     private int moveSteps;
     private int direction = -1;
-    private bool follows = false;
 
     // Use this for initialization
     void Start()

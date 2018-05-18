@@ -9,7 +9,6 @@ public class FatbatControler : Hitable
     public bool moveWithCamera;
     private GameObject player;
     private GameObject mainCamera;
-    private int direction = -1;
     private Animator animator;
     private float oldY;
     private bool active = false;

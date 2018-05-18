@@ -1,9 +1,10 @@
 WindowsStandalone
 SceneListBegin?
 Assets/Scenes/StartScene.unity
+Assets/Scenes/ScoreScene.unity
 Assets/Scenes/Scene1.unity
 Assets/Scenes/Scene2.unity
-Assets/Scenes/ScoreScene.unity
+Assets/Scenes/Scene3.unity
 SceneListEnd?
 850b385f9d7146127e74b4e22715211d Assembly-CSharp.dll:.CameraFollower
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -128,7 +129,7 @@ f216927418bb7e9187295cb7cb4f6148 Assembly-CSharp.dll:.SpikewallFaller
 e3c39bc875c71b0b5a481df0f38a03ad Assembly-CSharp.dll:.FireballController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-1d93aaeceac1486bc4524d49f9bef441 Assembly-CSharp.dll:.PlayerController
+f19467091844e78155106832fca9ae20 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Score
 d35e3997693bbac7b3863796ead9eac4 Assembly-CSharp.dll:.FatbatControler
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator

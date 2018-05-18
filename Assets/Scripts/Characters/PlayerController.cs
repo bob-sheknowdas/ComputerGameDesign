@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody2D myRigid;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
+    public LayerMask whatIsIce;
     public float speed;
     public string sceneToRespawn;
     public bool hasSword;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject swordCheck;
     private bool alive = true;
     private bool grounded = true;
+    private bool iced = false;
     private int direction = 1;
 
     // Use this for initialization
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (alive)
         {
-            grounded = IsGrounded();
+            CheckGroundedAndIced();
 
             animator.SetBool("grounded", grounded);
             animator.SetFloat("vSpeed", myRigid.velocity.y);
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour {
                 Jump();
             }
 
-            else
+            else if (!iced || myRigid.velocity.x * direction <= speed / 2)
             {
                 float leftright = Input.GetAxisRaw("Horizontal");
                 Vector2 scale = transform.localScale;
@@ -74,6 +76,10 @@ public class PlayerController : MonoBehaviour {
                 {
                     StopMovement();
                 }
+            }
+            else
+            {
+                animator.SetBool("running", false);
             }
         }
     }
@@ -105,11 +111,12 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    bool IsGrounded()
+    void CheckGroundedAndIced()
     {
         Vector3 position1 = groundCheck.transform.position;
-        Vector3 position2 = new Vector3(position1.x + (direction * 0.4f), position1.y + 0.02f, position1.z);
-        return Physics2D.OverlapArea(position1, position2, whatIsGround);
+        Vector3 position2 = new Vector3(position1.x + (direction * 0.43f), position1.y + 0.02f, position1.z);
+        grounded = Physics2D.OverlapArea(position1, position2, whatIsGround);
+        iced = Physics2D.OverlapArea(position1, position2, whatIsIce);
     }
 
     void Die()

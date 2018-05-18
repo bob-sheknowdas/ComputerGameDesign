@@ -175,16 +175,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150aefe83dcd79645835929f4e863c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieSound: {fileID: 0}
   swordSound: {fileID: 8300000, guid: ada2abcc897f17b42950443e4efe481c, type: 3}
-  jumpSound: {fileID: 8300000, guid: 6bd1835d3379443f480d3953eaa3be02, type: 3}
   myRigid: {fileID: 50760148467463618}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4352
+    m_Bits: 12544
   whatIsHitable:
     serializedVersion: 2
     m_Bits: 5120
+  whatIsIce:
+    serializedVersion: 2
+    m_Bits: 8192
   speed: 5
   sceneToRespawn: Scene1
   hasSword: 1
