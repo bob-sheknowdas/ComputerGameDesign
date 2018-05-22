@@ -5,7 +5,7 @@ using UnityEngine;
 public class BrokenBlockTrigger : MonoBehaviour {
 
     public GameObject block;
-    public float secondsToWait;
+    private float secondsToWait = 0.2f;
 
     void OnTriggerEnter2D(Collider2D other)
     {

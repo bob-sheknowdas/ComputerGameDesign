@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private bool alive = true;
     private bool grounded = true;
     private bool iced = false;
+    private bool iceJump = false;
     private int direction = 1;
 
     // Use this for initialization
@@ -46,16 +47,14 @@ public class PlayerController : MonoBehaviour {
 
             if (!grounded)
                 LimitFallSpeed();
+            else
+                iceJump = false;
 
             if (Input.GetKeyDown(KeyCode.Space) && hasSword)
-            {
                 Attack();
-            }
 
             else if (updown > 0 && grounded == true)
-            {
                 Jump();
-            }
 
             else if (!iced || myRigid.velocity.x * direction <= speed / 2)
             {
@@ -72,7 +71,7 @@ public class PlayerController : MonoBehaviour {
                     direction = 1;
                     Move();
                 }
-                else
+                else if(!iceJump)
                 {
                     StopMovement();
                 }
@@ -113,6 +112,8 @@ public class PlayerController : MonoBehaviour {
 
     void CheckGroundedAndIced()
     {
+        if(groundCheck==null)
+            groundCheck = GameObject.FindGameObjectWithTag("GroundCheck");
         Vector3 position1 = groundCheck.transform.position;
         Vector3 position2 = new Vector3(position1.x + (direction * 0.43f), position1.y + 0.02f, position1.z);
         grounded = Physics2D.OverlapArea(position1, position2, whatIsGround);
@@ -129,6 +130,9 @@ public class PlayerController : MonoBehaviour {
 
     void Attack()
     {
+
+        if (swordCheck == null)
+            swordCheck = GameObject.FindGameObjectWithTag("SwordHitCheck");
         myAudioSource.PlayOneShot(swordSound);
         animator.SetTrigger("attacking");
         Vector2 position = new Vector2(swordCheck.transform.position.x + (0.4f * direction), swordCheck.transform.position.y);
@@ -142,6 +146,7 @@ public class PlayerController : MonoBehaviour {
     void Jump()
     {
         //myAudioSource.PlayOneShot(jumpSound);
+        iceJump = iced;
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
     }

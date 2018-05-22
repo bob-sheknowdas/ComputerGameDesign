@@ -12,7 +12,6 @@ public class PixiController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         MovePixi();
     }
 
@@ -24,6 +23,8 @@ public class PixiController : MonoBehaviour {
 
     void MovePixi()
     {
+        if(player==null)
+            player = GameObject.FindGameObjectWithTag("Player");
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, 0.05f);
         float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, 0.05f);
 

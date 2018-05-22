@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class FatbatControler : Hitable
 {
-    public Rigidbody2D myRigid;
-    public float speed;
     public bool moveWithCamera;
     private GameObject player;
     private GameObject mainCamera;
     private Animator animator;
-    private float oldY;
+    private float oldCamY;
+    private float speed = 3.5f;
     private bool active = false;
 
     void Start()
@@ -18,12 +17,12 @@ public class FatbatControler : Hitable
         player = GameObject.FindGameObjectWithTag("Player");
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         animator = GetComponent<Animator>();
-        oldY = mainCamera.transform.position.y;
+        oldCamY = mainCamera.transform.position.y;
     }
 
     void Update()
     {
-        Vector3 position = this.transform.position;
+        Vector3 position = transform.position;
         Vector3 playerPosition = player.transform.position;
         float playerDistance = Vector3.Distance(playerPosition, position);
 
@@ -35,35 +34,42 @@ public class FatbatControler : Hitable
                 yDistance *= -1;
 
             if (moveWithCamera)
-                MoveWithCamera(position);
+                MoveWithCamera();
 
-            if (yDistance <= 1 && playerDistance <= 2)
-            {
-                myRigid.velocity = new Vector2(0, 0);
-                animator.SetTrigger("explode");
-            }
+            if (yDistance <= 0.5 && playerDistance <= 2)
+               animator.SetTrigger("explode");
             else
-            {
-                MoveTowardsPlayer(position, playerPosition);
-            }
+                MoveTowardsPlayer(playerPosition);
         }
         else if (playerDistance <= 11)
             active = true;
     }
 
-    void MoveWithCamera(Vector3 position)
+    void MoveWithCamera()
     {
-        float currentY = mainCamera.transform.position.y;
-        float newFatbatY = position.y + (currentY-oldY);
+        Vector3 position = transform.position;
+        float currentCamY = mainCamera.transform.position.y;
+        float newFatbatY = position.y + (currentCamY-oldCamY);
         transform.position = new Vector3(position.x, newFatbatY, position.z);
-        oldY = currentY;
+        oldCamY = currentCamY;
     }
 
-    void MoveTowardsPlayer(Vector2 position, Vector2 playerPosition)
+    void MoveTowardsPlayer(Vector3 playerPosition)
     {
-        float x = playerPosition.x - position.x;
-        float y = playerPosition.y - position.y;
-        myRigid.velocity = new Vector2(x * 1f, y * 1f);
+        Vector3 position = transform.position;
+        Vector3 delta = playerPosition - position;
+        Vector3 deltaNormalized = delta;
+        deltaNormalized.Normalize();
+
+        float moveSpeed = speed * Time.deltaTime;
+        Vector3 moveVector = (deltaNormalized * moveSpeed);
+        
+        if (Mathf.Abs(delta.x) < Mathf.Abs(moveVector.x))
+            moveVector.x = delta.x;
+        if (Mathf.Abs(delta.y) < Mathf.Abs(moveVector.y))
+            moveVector.y = delta.y;
+
+        transform.position = transform.position + moveVector;
     }
 
     void Explode()
@@ -76,7 +82,7 @@ public class FatbatControler : Hitable
         Vector2 position = this.transform.position;
         Vector2 playerPosition = player.transform.position;
         float playerDistance = Vector3.Distance(playerPosition, position);
-        if (playerDistance <= 4)
+        if (playerDistance <= 2)
             player.GetComponent<PlayerController>().Hit();
     }
 
@@ -84,6 +90,11 @@ public class FatbatControler : Hitable
     {
         PlayerPrefs.SetInt("kills", 1 + PlayerPrefs.GetInt("kills"));
         base.Destroy();
+    }
+
+    public void ResizeForExplosion()
+    {
+        transform.localScale = new Vector3(2, 2, 1);
     }
 }
     

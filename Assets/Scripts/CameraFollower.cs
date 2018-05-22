@@ -12,7 +12,6 @@ public class CameraFollower : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        player = GameObject.FindGameObjectWithTag("Player");
         MoveCamera();
     }
 
@@ -23,6 +22,8 @@ public class CameraFollower : MonoBehaviour {
 
     void MoveCamera()
     {
+        if(player==null)
+            player = GameObject.FindGameObjectWithTag("Player");
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTime);
         float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTime);
 

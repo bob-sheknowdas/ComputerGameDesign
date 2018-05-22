@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigid: {fileID: 50038099565485860}
   speed: 1
+  moveWithCamera: 0
 --- !u!212 &212347496831111024
 SpriteRenderer:
   m_ObjectHideFlags: 1
