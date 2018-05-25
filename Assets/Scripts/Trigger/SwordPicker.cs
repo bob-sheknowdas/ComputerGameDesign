@@ -22,6 +22,7 @@ public class SwordPicker : MonoBehaviour
         ninja.SetActive(false);
         yield return new WaitForSeconds(secondsToWait);
         block.GetComponent<Animator>().SetTrigger("brake");
+        Destroy(block.GetComponent<BoxCollider2D>());
         Destroy(gameObject);
     }
 

@@ -123,7 +123,6 @@ public class PlayerController : MonoBehaviour {
     {
         //myAudioSource.PlayOneShot(dieSound);
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
-        PlayerPrefs.SetInt("kills", 0);
         SceneManager.LoadScene(sceneToRespawn);
     }
 

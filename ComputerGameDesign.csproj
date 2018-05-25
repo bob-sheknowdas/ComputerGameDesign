@@ -297,11 +297,13 @@
     <Compile Include="Assets\Scripts\Screens\StartGame.cs" />
     <Compile Include="Assets\Scripts\Trigger\BrokenBlockTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\Checkpoint.cs" />
+    <Compile Include="Assets\Scripts\Trigger\CloudDropTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\Enemy1Activator.cs" />
     <Compile Include="Assets\Scripts\Trigger\FireballSpawner.cs" />
     <Compile Include="Assets\Scripts\Trigger\LevelEndTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\ShowTextTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\SpikewallFaller.cs" />
+    <Compile Include="Assets\Scripts\Trigger\SpikewallRiser.cs" />
     <Compile Include="Assets\Scripts\Trigger\SwordPicker.cs" />
   </ItemGroup>
   <ItemGroup>
