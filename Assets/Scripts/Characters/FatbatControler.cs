@@ -36,7 +36,7 @@ public class FatbatControler : Hitable
             if (moveWithCamera)
                 MoveWithCamera();
 
-            if (yDistance <= 0.5 && playerDistance <= 2)
+            if (yDistance <= 0.5 && playerDistance <= 1.5)
                animator.SetTrigger("explode");
             else
                 MoveTowardsPlayer(playerPosition);

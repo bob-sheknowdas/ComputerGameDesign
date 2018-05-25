@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4539604209494648}
   - component: {fileID: 212058162000206568}
   - component: {fileID: 61267164453615010}
+  - component: {fileID: 114132218515707712}
   m_Layer: 8
   m_Name: platform3_broken
   m_TagString: Platform
@@ -152,6 +153,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.36, y: 8.19}
   m_EdgeRadius: 0
+--- !u!114 &114132218515707712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966069260232536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9605ea4ea0b0f741a42a60fd21ea49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114621980708057834
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,6 +25,7 @@ public class StartGame : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("deaths", 0);
                 PlayerPrefs.SetInt("kills", 0);
+                PlayerPrefs.SetString("checkpoint", "");
                 SceneManager.LoadScene("Scene1");
             }
         }

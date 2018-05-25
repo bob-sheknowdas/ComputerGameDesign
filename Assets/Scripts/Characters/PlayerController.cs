@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour {
 
             animator.SetBool("grounded", grounded);
             animator.SetFloat("vSpeed", myRigid.velocity.y);
-            float updown = Input.GetAxisRaw("Vertical");
 
             if (!grounded)
                 LimitFallSpeed();
@@ -53,7 +52,7 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space) && hasSword)
                 Attack();
 
-            else if (updown > 0 && grounded == true)
+            else if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && grounded == true)
                 Jump();
 
             else if (!iced || myRigid.velocity.x * direction <= speed / 2)
