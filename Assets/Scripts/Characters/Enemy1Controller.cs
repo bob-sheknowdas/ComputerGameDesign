@@ -106,6 +106,6 @@ public class Enemy1Controller : Hitable
         PlayerPrefs.SetInt("kills", 1 + PlayerPrefs.GetInt("kills"));
         PlayerPrefs.SetInt("level", 5);
         base.Destroy();
-        SceneManager.LoadScene("ScoreScene");
+        SceneManager.LoadScene("ScoreScene", LoadSceneMode.Single);
     }
 }

@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d5e107911f2f94cbd2ba4c1040f3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAudioSource: {fileID: 0}
-  fireball: {fileID: 8300000, guid: 1da4c990482ac3a488172f7316be71ae, type: 3}
+  fireballFlySound: {fileID: 8300000, guid: 1da4c990482ac3a488172f7316be71ae, type: 3}
+  fireballExplodeSound: {fileID: 8300000, guid: 9ae47099119000941adb3c2e715599fc,
+    type: 3}
 --- !u!212 &212891448426563600
 SpriteRenderer:
   m_ObjectHideFlags: 1

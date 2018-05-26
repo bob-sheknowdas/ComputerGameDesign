@@ -5,6 +5,8 @@ using UnityEngine;
 public class FatbatControler : Hitable
 {
     public bool moveWithCamera;
+    public AudioClip explodeSound;
+    private AudioSource myAudioSource;
     private GameObject player;
     private GameObject mainCamera;
     private Animator animator;
@@ -16,6 +18,7 @@ public class FatbatControler : Hitable
     {
         player = GameObject.FindGameObjectWithTag("Player");
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         oldCamY = mainCamera.transform.position.y;
     }
@@ -72,11 +75,6 @@ public class FatbatControler : Hitable
         transform.position = transform.position + moveVector;
     }
 
-    void Explode()
-    {
-        Object.Destroy(this.gameObject);
-    }
-
     void DamagePlayer()
     {
         Vector2 position = this.transform.position;
@@ -95,6 +93,11 @@ public class FatbatControler : Hitable
     public void ResizeForExplosion()
     {
         transform.localScale = new Vector3(2, 2, 1);
+    }
+
+    public void PlayExplosionSound()
+    {
+        myAudioSource.PlayOneShot(explodeSound);
     }
 }
     

@@ -107,9 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461d5a29ff9261d4490849efeaa33af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigid: {fileID: 50038099565485860}
-  speed: 1
   moveWithCamera: 0
+  explodeSound: {fileID: 8300000, guid: 9ae47099119000941adb3c2e715599fc, type: 3}
 --- !u!212 &212347496831111024
 SpriteRenderer:
   m_ObjectHideFlags: 1
