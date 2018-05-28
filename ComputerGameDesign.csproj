@@ -288,24 +288,28 @@
     <Compile Include="Assets\Scripts\Bg1Follower.cs" />
     <Compile Include="Assets\Scripts\CameraFollower.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy1Controller.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy1FinalController.cs" />
     <Compile Include="Assets\Scripts\Characters\FatbatControler.cs" />
     <Compile Include="Assets\Scripts\Characters\PixiController.cs" />
     <Compile Include="Assets\Scripts\Characters\PlayerController.cs" />
     <Compile Include="Assets\Scripts\FireballController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\RockController.cs" />
+    <Compile Include="Assets\Scripts\Scene5VideoController.cs" />
     <Compile Include="Assets\Scripts\Screens\Score.cs" />
     <Compile Include="Assets\Scripts\Screens\StartGame.cs" />
     <Compile Include="Assets\Scripts\Trigger\BrokenBlockTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Trigger\CloudDropTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\Enemy1Activator.cs" />
+    <Compile Include="Assets\Scripts\Trigger\Enemy1FinalStopper.cs" />
     <Compile Include="Assets\Scripts\Trigger\FireballSpawner.cs" />
     <Compile Include="Assets\Scripts\Trigger\LevelEndTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\ShowTextTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\SpikewallFaller.cs" />
     <Compile Include="Assets\Scripts\Trigger\SpikewallRiser.cs" />
     <Compile Include="Assets\Scripts\Trigger\SwordPicker.cs" />
+    <Compile Include="Assets\Scripts\Trigger\VideoEndTrigger.cs" />
     <Compile Include="Assets\Scripts\WindAudioController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -318,11 +322,14 @@
     <None Include="Assets\DownloadedContent\Drawings\clker.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\goodwp.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\hesed.info\source.txt" />
+    <None Include="Assets\DownloadedContent\Drawings\openclipart.org\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\opengameart.org\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\redbubble.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\vectorstock.com\source.txt" />
+    <None Include="Assets\DownloadedContent\Drawings\worldartsme.com\source.txt" />
     <None Include="Assets\DownloadedContent\Fonts\dafont.com\Goatskin\License - READ THIS.txt" />
     <None Include="Assets\DownloadedContent\Fonts\dafont.com\Shogun Clan\README.txt" />
+    <None Include="Assets\Ninja Files\Read Me.txt" />
     <None Include="Assets\ThingsToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -61,4 +61,12 @@ public class FireballController : MonoBehaviour {
         Vector2 normedDirection = direction.normalized * 0.1f;
         return normedDirection;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Ground")
+        {
+            EndMovement();
+        }
+    }
 }

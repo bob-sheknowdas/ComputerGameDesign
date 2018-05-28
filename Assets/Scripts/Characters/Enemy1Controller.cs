@@ -37,7 +37,7 @@ public class Enemy1Controller : Hitable
                 animator.SetBool("running", false);
                 if (currentTime >= hitTime)
                 {
-                    Attack(position, playerPosition);
+                    Attack( playerPosition);
                     currentTime = 0;
                 }
                 currentTime += Time.deltaTime;
@@ -60,14 +60,15 @@ public class Enemy1Controller : Hitable
         wasActivated = true;
     }
 
-    void Attack(Vector2 position, Vector2 playerPosition)
+    void Attack( Vector2 playerPosition)
     {
         animator.SetTrigger("attacking");
-        float x = this.transform.position.x + (0.5f * direction);
-        float y = this.transform.position.y - 0.5f;
+        Vector2 position = this.transform.position;
+        position.x = position.x + (0.5f * direction);
+        position.y = position.y - 0.5f;
         Vector2 fireDirection = playerPosition - position;
         float angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
-        GameObject.Instantiate(fireball, new Vector2(x, y), Quaternion.AngleAxis(angle + 180, Vector3.forward));
+        GameObject.Instantiate(fireball, new Vector2(position.x, position.y), Quaternion.AngleAxis(angle + 180, Vector3.forward));
     }
 
     bool SeesPlayer(Vector2 position, Vector2 playerPosition)

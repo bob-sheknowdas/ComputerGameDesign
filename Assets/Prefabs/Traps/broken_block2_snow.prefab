@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114315338009611950}
   m_Layer: 8
   m_Name: platform3_broken_snow
-  m_TagString: Platform
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 1710470526764952}
-  secondsToWait: 0.2
 --- !u!212 &212081302833051752
 SpriteRenderer:
   m_ObjectHideFlags: 1

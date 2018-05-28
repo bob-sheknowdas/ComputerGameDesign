@@ -930,6 +930,21 @@ Prefab:
       propertyPath: m_Name
       value: platform4 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 61890416244492404, guid: 38228ab51e407e54c8d3bdadc5c9836b,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 61890416244492404, guid: 38228ab51e407e54c8d3bdadc5c9836b,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61890416244492404, guid: 38228ab51e407e54c8d3bdadc5c9836b,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.025
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38228ab51e407e54c8d3bdadc5c9836b, type: 2}
   m_IsPrefabParent: 0
@@ -1323,7 +1338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1897606884574280, guid: 81f00a4d555cddd43a9e7a4b420d5f97, type: 2}
       propertyPath: m_TagString
-      value: Platform
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1897606884574280, guid: 81f00a4d555cddd43a9e7a4b420d5f97, type: 2}
       propertyPath: m_Layer
@@ -1791,7 +1806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4710735957957774, guid: 38228ab51e407e54c8d3bdadc5c9836b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.23
+      value: -6.205
       objectReference: {fileID: 0}
     - target: {fileID: 4710735957957774, guid: 38228ab51e407e54c8d3bdadc5c9836b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1828,6 +1843,16 @@ Prefab:
     - target: {fileID: 4710735957957774, guid: 38228ab51e407e54c8d3bdadc5c9836b, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.81995
+      objectReference: {fileID: 0}
+    - target: {fileID: 61890416244492404, guid: 38228ab51e407e54c8d3bdadc5c9836b,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 61890416244492404, guid: 38228ab51e407e54c8d3bdadc5c9836b,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38228ab51e407e54c8d3bdadc5c9836b, type: 2}
@@ -1915,7 +1940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1897606884574280, guid: 81f00a4d555cddd43a9e7a4b420d5f97, type: 2}
       propertyPath: m_TagString
-      value: Platform
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1897606884574280, guid: 81f00a4d555cddd43a9e7a4b420d5f97, type: 2}
       propertyPath: m_Layer
@@ -2550,6 +2575,10 @@ Prefab:
     - target: {fileID: 1921063991948488, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}
       propertyPath: m_Name
       value: broken_block (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921063991948488, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}
@@ -5173,6 +5202,10 @@ Prefab:
       propertyPath: m_Name
       value: platform5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1550383140794152, guid: 456562a3de12d3d42a21f0f1306a3534, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 456562a3de12d3d42a21f0f1306a3534, type: 2}
   m_IsPrefabParent: 0
@@ -5472,6 +5505,10 @@ Prefab:
     - target: {fileID: 4589830739062064, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921063991948488, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2c90ba5c4764e347b355043d46f7a7c, type: 2}

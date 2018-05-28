@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
-
-    //public AudioClip dieSound;
+public class PlayerController : Destroyable {
+    
     public AudioClip swordSound;
-    //public AudioClip jumpSound;
     public Rigidbody2D myRigid;
     public LayerMask whatIsGround;
     public LayerMask whatIsHitable;
@@ -58,7 +56,6 @@ public class PlayerController : MonoBehaviour {
             else if (!iced || myRigid.velocity.x * direction <= speed / 2)
             {
                 float leftright = Input.GetAxisRaw("Horizontal");
-                Vector2 scale = transform.localScale;
 
                 if (leftright < 0f)
                 {
@@ -78,18 +75,6 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 animator.SetBool("running", false);
-            }
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Killer")
-        {
-            Hit();
-            if (other.gameObject.layer == 11)
-            {
-                other.gameObject.GetComponent<FireballController>().EndMovement();
             }
         }
     }
@@ -119,9 +104,8 @@ public class PlayerController : MonoBehaviour {
         iced = Physics2D.OverlapArea(position1, position2, whatIsIce);
     }
 
-    void Die()
+    public override void Destroy()
     {
-        //myAudioSource.PlayOneShot(dieSound);
         PlayerPrefs.SetInt("deaths", 1+ PlayerPrefs.GetInt("deaths"));
         SceneManager.LoadScene(sceneToRespawn, LoadSceneMode.Single);
     }
@@ -143,7 +127,6 @@ public class PlayerController : MonoBehaviour {
 
     void Jump()
     {
-        //myAudioSource.PlayOneShot(jumpSound);
         iceJump = iced;
         animator.SetBool("running", false);
         myRigid.velocity = new Vector2(myRigid.velocity.x, 12);
@@ -176,5 +159,13 @@ public class PlayerController : MonoBehaviour {
     {
         animator.SetBool("running", false);
         alive = trueFalse;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Killer" || other.gameObject.tag == "Enemy1F")
+        {
+            Hit();
+        }
     }
 }

@@ -17,6 +17,8 @@ public class Bg1Follower : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if(player==null)
+            player = GameObject.FindGameObjectWithTag("Player");
         Vector2 playerPositionNew = player.transform.position;
         float offsetX = playerPosition.x - playerPositionNew.x;
         

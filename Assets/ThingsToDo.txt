@@ -1,4 +1,3 @@
-- sounds and music
 - story design (level 1, level 2)
 - level design (level 1)
 - start and score screen optimizing

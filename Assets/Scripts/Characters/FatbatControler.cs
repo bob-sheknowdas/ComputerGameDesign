@@ -84,10 +84,10 @@ public class FatbatControler : Hitable
             player.GetComponent<PlayerController>().Hit();
     }
 
-    public override void Destroy()
+    public override void Hit()
     {
         PlayerPrefs.SetInt("kills", 1 + PlayerPrefs.GetInt("kills"));
-        base.Destroy();
+        base.Hit();
     }
 
     public void ResizeForExplosion()
@@ -97,6 +97,8 @@ public class FatbatControler : Hitable
 
     public void PlayExplosionSound()
     {
+        if(myAudioSource==null)
+            myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         myAudioSource.PlayOneShot(explodeSound);
     }
 }

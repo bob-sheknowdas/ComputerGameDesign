@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 212058162000206568}
   - component: {fileID: 61267164453615010}
   - component: {fileID: 114132218515707712}
+  - component: {fileID: 95101457859882028}
   m_Layer: 8
   m_Name: platform3_broken
-  m_TagString: Platform
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +154,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.36, y: 8.19}
   m_EdgeRadius: 0
+--- !u!95 &95101457859882028
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966069260232536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e141e8ce5a0d4a64bb0995a19e9a7c29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114132218515707712
 MonoBehaviour:
   m_ObjectHideFlags: 1
