@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerGameDesign", "ComputerGameDesign.csproj", "{1F561A9A-5585-E82E-7BCB-3FAA544BDC94}"
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerGameDesign", "Assembly-CSharp.csproj", "{37A8E23E-3BFF-0D22-CA28-2D1BC1D32DC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F561A9A-5585-E82E-7BCB-3FAA544BDC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F561A9A-5585-E82E-7BCB-3FAA544BDC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F561A9A-5585-E82E-7BCB-3FAA544BDC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F561A9A-5585-E82E-7BCB-3FAA544BDC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A8E23E-3BFF-0D22-CA28-2D1BC1D32DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A8E23E-3BFF-0D22-CA28-2D1BC1D32DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A8E23E-3BFF-0D22-CA28-2D1BC1D32DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A8E23E-3BFF-0D22-CA28-2D1BC1D32DC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
