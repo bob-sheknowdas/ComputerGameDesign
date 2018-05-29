@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 10
+  controlID: 121
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 11
+  controlID: 122
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 12
+  controlID: 123
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -588,19 +588,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/DownloadedContent/Drawings/worldartsme.com
+    - Assets/Prefabs/Traps
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/DownloadedContent/Drawings/worldartsme.com
+  - Assets/Prefabs/Traps
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cleppelt\Unity\ComputerGameDesign
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e350000
-    m_LastClickedID: 13678
-    m_ExpandedIDs: 00000000f23400001e3500002e35000094350000ca360000ba3700001a3800001e38000020380000f03a0000f23a0000f43a0000f63a0000f83a0000fa3a0000fc3a0000fe3a0000003b0000023b0000043b0000063b0000083b00000a3b00000c3b00000e3b0000103b0000123b0000143b0000163b0000183b00001a3b00001c3b00001e3b0000203b0000223b000000ca9a3bffffff7f
+    m_SelectedIDs: c4280000
+    m_LastClickedID: 10436
+    m_ExpandedIDs: 000000009e270000082800009a280000822a0000d82a0000f62b00007a2c00007e2c00003432000036320000383200003a3200003c3200003e32000040320000423200004432000046320000483200004a3200004c3200004e32000050320000523200005432000056320000583200005a3200005c3200005e3200006032000062320000643200006632000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,7 +628,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f23400001e3500002e35000094350000ca360000f6360000ba370000fa3700001a3800001e38000020380000f03a0000f23a0000f43a0000f63a0000f83a0000fa3a0000fc3a0000fe3a0000003b0000023b0000043b0000063b0000083b00000a3b00000c3b00000e3b0000103b0000123b0000143b0000163b0000183b00001a3b00001c3b00001e3b0000203b0000223b0000
+    m_ExpandedIDs: 000000009e270000082800009a280000822a0000d82a0000f62b00007a2c00007e2c00003432000036320000383200003a3200003c3200003e32000040320000423200004432000046320000483200004a3200004c3200004e32000050320000523200005432000056320000583200005a3200005c3200005e32000060320000623200006432000066320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -745,24 +745,24 @@ MonoBehaviour:
     height: 470
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0e300000
-    m_LastClickedID: 0
-    m_ExpandedIDs: acd8f6fff0d1f8ff44d5f8ff76dbf8ff14def8ff42e4f8ff88e9f8ffdaedf8ffbc9bf9fffc9ef9ff6aa5f9ffdeb3f9ffda81faff8291faffb49efaff842ffbffce35fbffb293fbff90adfbff74dffcff24e4fcff9af4fcff44b7fdff5e02feffd666ffff2067ffffded9ffffb0e1ffff00000000a8600000be600000089b000014a0000088b40000ceb50000c8b6000006b700006ab8000048b9000070b900007eb90000beb9000086bb0000cebb0000febc000014bd00000ebe00004cbe000066be0000d8be0000d80301007e0b0100600c010038110100c41301000a150100041601005047010030480100bc78010028790100de7901004e820100da820100229a0100ba9b0100
+    scrollPos: {x: 0, y: 107}
+    m_SelectedIDs: f6faffff
+    m_LastClickedID: -1290
+    m_ExpandedIDs: 9efbffff0000000002300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: rock
-      m_OriginalName: rock
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -250296
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -804,9 +804,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 90.56055, y: 30.388391, z: -0.88671875}
+    m_Target: {x: 16.196892, y: 0.6118404, z: -0.7324219}
     speed: 2
-    m_Value: {x: 90.56055, y: 30.388391, z: -0.88671875}
+    m_Value: {x: 16.196892, y: 0.6118404, z: -0.7324219}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -834,9 +834,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.043514
+    m_Target: 11.308539
     speed: 2
-    m_Value: 26.043514
+    m_Value: 11.308539
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -331,7 +331,6 @@
     <None Include="Assets\DownloadedContent\Drawings\worldartsme.com\source.txt" />
     <None Include="Assets\DownloadedContent\Fonts\dafont.com\Goatskin\License - READ THIS.txt" />
     <None Include="Assets\DownloadedContent\Fonts\dafont.com\Shogun Clan\README.txt" />
-    <None Include="Assets\Ninja Files\Read Me.txt" />
     <None Include="Assets\ThingsToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
