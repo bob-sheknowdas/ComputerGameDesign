@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Scene5VideoController : MonoBehaviour {
 
@@ -39,6 +40,14 @@ public class Scene5VideoController : MonoBehaviour {
         StartCoroutine(RunScene());
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.L))
+        {
+            SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
+        }
+    }
+
     IEnumerator RunScene()
     {
         yield return StartCoroutine(AllMove(-30));
@@ -61,13 +70,7 @@ public class Scene5VideoController : MonoBehaviour {
         yield return StartCoroutine(Move());
         yield return StartCoroutine(ShowText(dragonImage, "Now it is my turn!\nSuckers!!"));
         yield return StartCoroutine(EnemyAttack());
-        player2.GetComponent<Animator>().SetTrigger("fall");
-        player2.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 20);
-        while (true)
-        {
-            Debug.Log(player2.transform.position);
-            yield return new WaitForSeconds(0.3f);
-        }
+        yield return StartCoroutine(FallAway());
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -188,5 +191,16 @@ public class Scene5VideoController : MonoBehaviour {
         }
         friend1.GetComponent<Animator>().SetTrigger("hit");
         friend2.GetComponent<Animator>().SetTrigger("hit");
+    }
+
+    IEnumerator FallAway()
+    {
+        player2.GetComponent<Animator>().SetTrigger("fall");
+        player2.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 19);
+        while (true)
+        {
+            Debug.Log(player2.transform.position);
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 }

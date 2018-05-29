@@ -6,15 +6,8 @@ public class Enemy1FinalController : MonoBehaviour {
 
     public Rigidbody2D myRigid;
     public GameObject fireball;
-    private Animator animator;
     private float currentTime = 0;
     private bool attacking = true;
-
-    // Use this for initialization
-    void Start ()
-    {
-        animator = GetComponent<Animator>();
-    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {

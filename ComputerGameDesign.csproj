@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\RockController.cs" />
     <Compile Include="Assets\Scripts\Scene5VideoController.cs" />
+    <Compile Include="Assets\Scripts\Screens\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Screens\Score.cs" />
     <Compile Include="Assets\Scripts\Screens\StartGame.cs" />
     <Compile Include="Assets\Scripts\Trigger\BrokenBlockTrigger.cs" />

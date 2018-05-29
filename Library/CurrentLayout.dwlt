@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 96
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 100
+  controlID: 33
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 101
+  controlID: 13
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -605,19 +605,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Characters
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Characters
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cleppelt\Unity\ComputerGameDesign
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 282d0000
-    m_LastClickedID: 11560
-    m_ExpandedIDs: 0000000098270000de2700000028000094280000742a0000ca2a0000f22b00003a2c00007c2c0000ea310000ec310000ee310000f0310000f2310000f4310000f6310000f8310000fa310000fc310000fe31000000320000023200000432000006320000083200000a3200000c3200000e32000010320000123200001432000016320000183200001a3200001c32000000ca9a3bffffff7f
+    m_SelectedIDs: 9a270000
+    m_LastClickedID: 10138
+    m_ExpandedIDs: 000000009a270000e027000002280000722a0000782a0000f62b00003e2c00006e2c0000802c0000842c0000782d0000ee340000f0340000f2340000f4340000f6340000f8340000fa340000fc340000fe34000000350000023500000435000006350000083500000a3500000c3500000e35000010350000123500001435000016350000183500001a3500001c3500001e3500002035000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098270000de27000000280000942800006e2a0000742a0000f22b00004a2c00007c2c0000802c0000ea310000ec310000ee310000f0310000f2310000f4310000f6310000f8310000fa310000fc310000fe31000000320000023200000432000006320000083200000a3200000c3200000e32000010320000123200001432000016320000183200001a3200001c320000
+    m_ExpandedIDs: 000000009a270000e02700000228000096280000782a0000ce2a0000f62b00003e2c0000802c0000ee340000f0340000f2340000f4340000f6340000f8340000fa340000fc340000fe34000000350000023500000435000006350000083500000a3500000c3500000e35000010350000123500001435000016350000183500001a3500001c3500001e35000020350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -763,9 +763,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 1e2c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 8415faff9416faff9e1afaff5e75faff6e76fafff47ffaffd81ffbfff081fbffd090fbff20adfbff1cb6fbff10c6fbff9ecefbffa6d2fbffaad4fbffc0f2fbff9efbffff00000000922e0000ea2f00002cb5000078c100000ec80000a2d80000ee46010004470100b65e0100
+    m_ExpandedIDs: 8a00fcff461ffcffda2efcffac47fcfff8fafdffa801feffc802feff4e3afeff5040feff6c4efeffec50feff0ebbffff04f4ffff9efbffff00000000fa3500005c4a0000fe700000747100004c800000a8980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -784,7 +784,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Scene5_2
+  - Scene5
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -816,14 +816,14 @@ MonoBehaviour:
     height: 396
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4942.519301748511
+  lastFramingTime: 4756.128780037597
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.6102254, y: -7.0331125, z: -0.1796875}
+    m_Target: {x: 23.72009, y: -3.5581505, z: -0.15063225}
     speed: 2
-    m_Value: {x: -2.6102254, y: -7.0331125, z: -0.1796875}
+    m_Value: {x: 23.72009, y: -3.5581505, z: -0.15063225}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:

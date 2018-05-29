@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreScene.unity
     guid: e7a2ff49eddb0844ea4284876786fa0d
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: d30e59187f3d5f34ca303c2faed22294

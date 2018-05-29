@@ -38,6 +38,10 @@ public class StartGame : MonoBehaviour {
         {
             currentTime += Time.deltaTime;
         }
+        if (Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.L))
+        {
+            SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
+        }
     }
 
     public IEnumerator BlinkText()

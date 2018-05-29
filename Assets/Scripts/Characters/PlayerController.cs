@@ -35,6 +35,10 @@ public class PlayerController : Destroyable {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.L))
+        {
+            SceneManager.LoadScene("LevelSelector", LoadSceneMode.Single);
+        }
         if (alive)
         {
             CheckGroundedAndIced();
