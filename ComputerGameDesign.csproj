@@ -307,6 +307,7 @@
     <Compile Include="Assets\Scripts\Trigger\FireballSpawner.cs" />
     <Compile Include="Assets\Scripts\Trigger\LevelEndTrigger.cs" />
     <Compile Include="Assets\Scripts\Trigger\ShowTextTrigger.cs" />
+    <Compile Include="Assets\Scripts\Trigger\SnowBall.cs" />
     <Compile Include="Assets\Scripts\Trigger\SpikewallFaller.cs" />
     <Compile Include="Assets\Scripts\Trigger\SpikewallRiser.cs" />
     <Compile Include="Assets\Scripts\Trigger\SwordPicker.cs" />

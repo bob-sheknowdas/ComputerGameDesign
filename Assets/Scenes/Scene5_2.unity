@@ -10355,7 +10355,7 @@ Transform:
   - {fileID: 882491744}
   - {fileID: 376189035}
   - {fileID: 1117454054}
-  - {fileID: 2046819377}
+  - {fileID: 1983605066}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15835,6 +15835,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &1983605066 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4737071371531004, guid: 7947bbe075be58b43977056662800d6d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2046819376}
 --- !u!1 &1992115939
 GameObject:
   m_ObjectHideFlags: 0
@@ -16226,14 +16231,21 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.77717996
       objectReference: {fileID: 0}
+    - target: {fileID: 4737071371531004, guid: 7947bbe075be58b43977056662800d6d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 50.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737071371531004, guid: 7947bbe075be58b43977056662800d6d, type: 2}
+      propertyPath: m_RootOrder
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737071371531004, guid: 7947bbe075be58b43977056662800d6d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.92
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7947bbe075be58b43977056662800d6d, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2046819377 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4037413847214470, guid: 7947bbe075be58b43977056662800d6d,
-    type: 2}
-  m_PrefabInternal: {fileID: 2046819376}
 --- !u!1 &2049040874
 GameObject:
   m_ObjectHideFlags: 0
