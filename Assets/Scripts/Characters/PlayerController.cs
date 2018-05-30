@@ -171,5 +171,11 @@ public class PlayerController : Destroyable {
         {
             Hit();
         }
+        else if (other.gameObject.tag == "Snowball")
+        {
+            Vector2 velocity = other.gameObject.GetComponent<Rigidbody2D>().velocity;
+            if (velocity != Vector2.zero)
+                Hit();
+        }
     }
 }

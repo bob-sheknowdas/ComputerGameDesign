@@ -24,6 +24,7 @@ TagManager:
   - SpeechPanel
   - Ground
   - Enemy1F
+  - Snowball
   layers:
   - Default
   - TransparentFX

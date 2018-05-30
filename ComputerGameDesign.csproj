@@ -321,6 +321,7 @@
     <None Include="Assets\DownloadedContent\Audio\soundbible.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\123rf.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\chittagongit.com\source.txt" />
+    <None Include="Assets\DownloadedContent\Drawings\clipart-library.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\clker.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\goodwp.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\hesed.info\source.txt" />
