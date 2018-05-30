@@ -6,12 +6,12 @@ public class SpikewallRiser : MonoBehaviour {
 
     public GameObject spikewall;
     public float hight;
-
+    public float speed;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            spikewall.GetComponent<Rigidbody2D>().velocity = Vector2.up * 3.2f;
+            spikewall.GetComponent<Rigidbody2D>().velocity = Vector2.up * speed * 1f;
         }
 
 

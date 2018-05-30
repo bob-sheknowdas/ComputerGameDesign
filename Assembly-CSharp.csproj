@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Trigger\SwordPicker.cs" />
     <Compile Include="Assets\Scripts\Trigger\VideoEndTrigger.cs" />
     <Compile Include="Assets\Scripts\WindAudioController.cs" />
+    <None Include="Assets\DownloadedContent\Drawings\clipart-library.com\source.txt" />
     <None Include="Assets\DownloadedContent\Audio\archive.org\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\vectorstock.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\worldartsme.com\source.txt" />
