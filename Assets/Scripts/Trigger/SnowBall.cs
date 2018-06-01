@@ -6,6 +6,7 @@ public class SnowBall : MonoBehaviour {
 
     public GameObject snowball;
     public AudioClip landslideSound;
+    private Animator animator;
     private float speed = 2;
     private bool active = false;
     private AudioSource myAudioSource;
@@ -13,6 +14,7 @@ public class SnowBall : MonoBehaviour {
     void Start()
     {
         myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        animator = snowball.GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -37,6 +39,7 @@ public class SnowBall : MonoBehaviour {
             else
             {
                 snowball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                animator.SetTrigger("brake");
             }
         }
     }

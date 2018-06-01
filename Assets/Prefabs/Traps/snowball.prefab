@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 212843581334965030}
   - component: {fileID: 58156986401876104}
   - component: {fileID: 50104741582380914}
+  - component: {fileID: 114977086798627732}
   m_Layer: 0
   m_Name: snowball
   m_TagString: Snowball
@@ -147,6 +148,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowball: {fileID: 1847465483702416}
   landslideSound: {fileID: 8300000, guid: 920c54c19bab13e4383e7dc22b46b513, type: 3}
+--- !u!114 &114977086798627732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847465483702416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9605ea4ea0b0f741a42a60fd21ea49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212167031498839240
 SpriteRenderer:
   m_ObjectHideFlags: 1

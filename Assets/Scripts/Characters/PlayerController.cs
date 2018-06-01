@@ -51,10 +51,10 @@ public class PlayerController : Destroyable {
             else
                 iceJump = false;
 
-            if (Input.GetKeyDown(KeyCode.Space) && hasSword)
+            if (Input.GetKeyDown(KeyCode.F) && hasSword)
                 Attack();
 
-            else if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && grounded == true)
+            else if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && grounded == true)
                 Jump();
 
             else if (!iced || myRigid.velocity.x * direction <= speed / 2)

@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
 
+    public GameObject controlTexts;
+    public GameObject controlImages;
     private Text startText;
     private float currentTime = 0;
     private float blinkTime = 2;
     private bool blinking = false;
+    private bool enterPressedOnce = false;
 
     // Use this for initialization
     void Start()
@@ -23,10 +26,20 @@ public class StartGame : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                PlayerPrefs.SetInt("deaths", 0);
-                PlayerPrefs.SetInt("kills", 0);
-                PlayerPrefs.SetString("checkpoint", "");
-                SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+                if (enterPressedOnce)
+                {
+                    PlayerPrefs.SetInt("deaths", 0);
+                    PlayerPrefs.SetInt("kills", 0);
+                    PlayerPrefs.SetString("checkpoint", "");
+                    SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+                }
+                else
+                {
+                    enterPressedOnce = true;
+                    controlTexts.SetActive(true);
+                    controlImages.SetActive(true);
+                    startText.text = "Press Enter again!";
+                }
             }
         }
         else if (currentTime >= blinkTime)

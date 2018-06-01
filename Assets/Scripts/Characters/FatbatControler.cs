@@ -13,6 +13,7 @@ public class FatbatControler : Hitable
     private float oldCamY;
     private float speed = 3.5f;
     private bool active = false;
+    private bool exploding = false;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class FatbatControler : Hitable
 
             if (yDistance <= 0.5 && playerDistance <= 1.5)
                animator.SetTrigger("explode");
-            else
+            else if (!exploding)
                 MoveTowardsPlayer(playerPosition);
         }
         else if (playerDistance <= 11)
@@ -100,6 +101,7 @@ public class FatbatControler : Hitable
         if(myAudioSource==null)
             myAudioSource = GameObject.Find("Audio Source").GetComponent<AudioSource>();
         myAudioSource.PlayOneShot(explodeSound);
+        exploding = true;
     }
 }
     

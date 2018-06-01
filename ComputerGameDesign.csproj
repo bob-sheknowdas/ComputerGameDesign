@@ -328,6 +328,7 @@
     <None Include="Assets\DownloadedContent\Drawings\openclipart.org\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\opengameart.org\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\redbubble.com\source.txt" />
+    <None Include="Assets\DownloadedContent\Drawings\techonthenet.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\vectorstock.com\source.txt" />
     <None Include="Assets\DownloadedContent\Drawings\worldartsme.com\source.txt" />
     <None Include="Assets\DownloadedContent\Fonts\dafont.com\Goatskin\License - READ THIS.txt" />
